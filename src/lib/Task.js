@@ -5,7 +5,7 @@ exports.Task = class Task {
         this.id = id;
         // 状态 0未启动 1运行中 2成功 3失败
         this.state = 0;
-        this.time = 0;
+        this.time = Date.now();
     }
 
     async run() {
@@ -23,7 +23,7 @@ exports.Task = class Task {
 
         return {
             id: this.id,
-            time: this.time,
+            time: Date.now() - this.time,
             state: this.state,
         }
     }

@@ -12,7 +12,7 @@ exports.TaskManager = class TaskManager {
         this.totalSuccess = 0;
         this.totalFail = 0;
         this.maxTime = 0;
-        this.minTime = 0;
+        this.minTime = Infinity;
 
         this.secondSuccessCount = 0;
         this.secondFailCount = 0;
